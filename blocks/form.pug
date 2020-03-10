@@ -1,0 +1,42 @@
++module('07', 'form-block')
+	.form-block
+		.form-block__block.form-block__block_left.wow.fadeInUp(data-wow-delay="250ms")
+			.form-block__title Акция!
+			.form-block__text Регистрируйся прямо сейчас и получи скидку!
+			.form-block__old-price 320 EUR
+			.form-block__new-price 290 EUR
+		.form-block__block.form-block__block_right
+			.form-block__container.wow.fadeInUp(data-wow-delay="500ms")
+				form.form(name="myForm")
+					.form__title.wow.fadeInUp(data-wow-delay="750ms") Заполни форму,
+					.form__desc.wow.fadeInUp(data-wow-delay="750ms") чтобы записаться и получить скидку
+					input.wow.fadeInUp(data-wow-delay="1000ms" type="text" placeholder="Имя:*")
+					input.wow.fadeInUp(data-wow-delay="1100ms" type="tel" placeholder="Телефон:*")
+					input.wow.fadeInUp(data-wow-delay="1200ms" type="email" placeholder="E-mail:")
+
+					label.container.wow.fadeInUp(data-wow-delay="1300ms") Я согласен на обработку персональных данных
+						input#remember(type="checkbox")
+						span.checkmark
+					button.button.form__btn.wow.fadeInUp(data-wow-delay="1400ms" type="button" onclick="return validateForm()") Записаться на курс
+		.counter.form-block__counter.wow.fadeInUp(data-wow-delay="750ms")
+			.counter__label ДО НАЧАЛА ОСТАЛОСЬ:
+			.counter__box
+				.counter__section.counter__section_days
+					span 9
+					span 0
+					.counter__text дней
+				.counter__dots :
+				.counter__section.counter__section_hours
+					span 2
+					span 4
+					.counter__text часов
+				.counter__dots :
+				.counter__section.counter__section_minutes
+					span 6
+					span 0
+					.counter__text минут
+				.counter__dots :
+				.counter__section.counter__section_seconds
+					span 6
+					span 0
+					.counter__text секунд
